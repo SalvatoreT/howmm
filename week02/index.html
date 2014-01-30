@@ -104,6 +104,51 @@
 				<section>
 					<section>
 						<h1>
+							What does this have to do with MSP430s?
+						</h1>
+					</section>
+					<section>
+						<img src="assets/energia.png" height="400">
+					</section>
+					<section>
+						<h3>Code structure</h3>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup()
+{
+  // put your setup code here, to run once:
+}
+
+void loop()
+{
+  // put your main code here, to run repeatedly:
+}
+					</code></pre>
+					</section>
+					<section>
+						<h3>Basic Example</h3>
+						<pre><code data-trim contenteditable  class=" hljs java">
+int YELLOW_LED = P1_1;
+
+void setup()
+{
+  // put your setup code here, to run once:
+  pinMode(YELLOW_LED, OUTPUT);   
+  digitalWrite(YELLOW_LED, HIGH);
+}
+
+void loop()
+{
+}
+					</code></pre>
+					</section>
+					<section>
+						<img src="assets//LaunchPadMSP430G2553-V1.5.jpg" height="700">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>
 							How can we bring this all together?
 						</h1>
 					</section>
