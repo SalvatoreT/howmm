@@ -12,3 +12,4 @@ Slides
 - [Week02](http://saltesta.com/howmm/week02/#/)
 - [Week03](http://saltesta.com/howmm/week03/#/)
 - [Week04](http://saltesta.com/howmm/week04/#/)
+- [Week05](http://saltesta.com/howmm/week05/)
