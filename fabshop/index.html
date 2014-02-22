@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>COLL 142 Week 02</title>
+		<title>FabShop Arduino Party</title>
 
 		<meta name="description" content="Hands-on with the Maker Movement">
 		<meta name="author" content="Salvatore Testa">
@@ -46,69 +46,55 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>COLL 142 - Week 02</h1>
-					<h3>Fun with <small>(and not breaking)</small>  LEDs</h3>
+					<h1>FabShop: Arduino</h1>
+					<h3>Microcontrollers are too much fun</h3>
 					<p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
-					<p>with special guest <strong>Christian Henry</strong></p>
+					<p>February 22, 2014</p>
 				</section>
-				<section>
-					<section>
-						<h1>What is an LED?</h1>
-					</section>
-					<section>
-						<h2>Light Emitting Diode</h2>
-						<img src="assets/5mm_Red_LED.jpg" height="500px">
-					</section>
-					<section>
-						<h2>Light Emitting Diode</h2>
-						<img src="assets/5mm_Red_LED_arrow.jpg" height="500px">
-						<aside class="notes">
-							electricity can only go one way
-						</aside>
-					</section>
-				</section>
-
 				<section>
 					<section>
 						<h1>
-							How do I keep from blowing-up everything?
+							What is Arduino?
 						</h1>
 					</section>
 					<section>
-						<h2>
-							Be aware of Ohm's Law
-						</h2>
-						<img src="assets/Georg_Simon_Ohm3.jpg" height="500px">
-						<p>Voltage = Current &times Resistance</p>
-					</section>
-					<section>
-						<h2>
-							How to calculate current with LED
-						</h2>
-						<img src="assets/Current.png" height="200"/>
-						<aside class="notes">
-							MSP430's max current is 6mA
-						</aside>
-					</section>
-					<section>
-						<h2>Demo Time!</h2>
-					</section>
-					<section data-transition="linear" data-background-transition="slide">
-						<iframe width="1280" height="720" src="//www.youtube.com/embed/JCPXckfT-6g?rel=0" frameborder="0" allowfullscreen></iframe>
-					</section>
-					<section>
-						<h3>If you're unsure, ask for help.</h3>
+						<p>
+							Arduino is an open-source electronics <b>prototyping platform</b> based on flexible, easy-to-use <b>hardware</b> and <b>software</b>.
+						</p>
+						<img src="assets/ArduinoUnoSmd450px.jpg" height="300px">
+						<img class="no-border" src="assets/blink.png" height="400px">
 					</section>
 				</section>
-
 				<section>
 					<section>
 						<h1>
-							What does this have to do with MSP430s?
+							How does it basically work?
 						</h1>
 					</section>
 					<section>
-						<img src="assets/energia.png" height="400">
+						<h2>I/O plus Logic</h2>
+						<img src="assets/arduino_pinout.png" height="500px">
+					</section>
+					<section>
+						<h2>INPUT</h2>
+						<img src="assets/buttons.jpg" height="400px">
+						<p>buttons, accelerometers, heat sensors, switches</p>
+					</section>
+					<section>
+						<h2>OUTPUT</h2>
+						<img src="assets/5MM_LED.jpg" height="400px">
+						<p>LEDs, motors, speakers</p>
+					</section>
+					<section>
+						<h1>LOGIC</h1>
+						<img class="no-border" src="assets/blink.png" height="500px">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>
+							How do I program an Arduino?
+						</h1>
 					</section>
 					<section>
 						<h3>Code structure</h3>
@@ -127,13 +113,13 @@ void loop()
 					<section>
 						<h3>Basic Example</h3>
 						<pre><code data-trim contenteditable  class=" hljs java">
-int YELLOW_LED = P1_1;
+int RED_LED = 13;
 
 void setup()
 {
   // put your setup code here, to run once:
-  pinMode(YELLOW_LED, OUTPUT);   
-  digitalWrite(YELLOW_LED, HIGH);
+  pinMode(RED_LED, OUTPUT);   
+  digitalWrite(RED_LED, HIGH);
 }
 
 void loop()
@@ -141,35 +127,8 @@ void loop()
 }
 					</code></pre>
 					</section>
-					<section>
-						<img src="assets//LaunchPadMSP430G2553-V1.5.jpg" height="700">
-					</section>
 				</section>
 
-				<section>
-					<section>
-						<h1>
-							How can we bring this all together?
-						</h1>
-					</section>
-					<section>
-						<p>
-							Make an LED-cardboard sign.
-						</p>
-						<ul>
-							<li>
-								cardboard
-							</li>
-							<li>
-								at least 8 LEDs
-							</li>
-							<li>
-								3 animations patterns that repeat
-							</li>
-						</ul> 
-
-					</section>
-				</section>
 			</div>
 
 		</div>
