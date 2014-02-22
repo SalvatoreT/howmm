@@ -1,104 +1,104 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>FabShop Arduino Party</title>
+        <title>FabShop Arduino Party</title>
 
-		<meta name="description" content="Hands-on with the Maker Movement">
-		<meta name="author" content="Salvatore Testa">
+        <meta name="description" content="Hands-on with the Maker Movement">
+        <meta name="author" content="Salvatore Testa">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 
 
-		<style type="text/css">
-			.reveal section img.no-border {
-				background: none;
-				border: none;
-				box-shadow: none;
-			}
-		</style>
+        <style type="text/css">
+            .reveal section img.no-border {
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+        </style>
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+            document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>FabShop: Arduino</h1>
-					<h3>Microcontrollers are too much fun</h3>
-					<p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
-					<p>February 22, 2014</p>
-				</section>
-				<section>
-					<section>
-						<h1>
-							What is Arduino?
-						</h1>
-					</section>
-					<section>
-						<p>
-							Arduino is an open-source electronics <b>prototyping platform</b> based on flexible, easy-to-use <b>hardware</b> and <b>software</b>.
-						</p>
-						<img src="assets/ArduinoUnoSmd450px.jpg" height="300px">
-						<img class="no-border" src="assets/blink.png" height="400px">
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>
-							How does it basically work?
-						</h1>
-					</section>
-					<section>
-						<h2>I/O plus Logic</h2>
-						<img src="assets/arduino_pinout.png" height="500px">
-					</section>
-					<section>
-						<h2>INPUT</h2>
-						<img src="assets/buttons.jpg" height="400px">
-						<p>buttons, accelerometers, heat sensors, switches</p>
-					</section>
-					<section>
-						<h2>OUTPUT</h2>
-						<img src="assets/5MM_LED.jpg" height="400px">
-						<p>LEDs, motors, speakers</p>
-					</section>
-					<section>
-						<h1>LOGIC</h1>
-						<img class="no-border" src="assets/blink.png" height="500px">
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1>
-							How do I program an Arduino?
-						</h1>
-					</section>
-					<section>
-						<h3>Code structure</h3>
-						<pre><code data-trim contenteditable  class=" hljs java">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>FabShop: Arduino</h1>
+                    <h3>Microcontrollers are too much fun</h3>
+                    <p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
+                    <p>February 22, 2014</p>
+                </section>
+                <section>
+                    <section>
+                        <h1>
+                            What is Arduino?
+                        </h1>
+                    </section>
+                    <section>
+                        <p>
+                            Arduino is an open-source electronics <b>prototyping platform</b> based on flexible, easy-to-use <b>hardware</b> and <b>software</b>.
+                        </p>
+                        <img src="assets/ArduinoUnoSmd450px.jpg" height="300px">
+                        <img class="no-border" src="assets/blink.png" height="400px">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>
+                            How does it basically work?
+                        </h1>
+                    </section>
+                    <section>
+                        <h2>I/O plus Logic</h2>
+                        <img src="assets/arduino_pinout.png" height="500px">
+                    </section>
+                    <section>
+                        <h2>INPUT</h2>
+                        <img src="assets/buttons.jpg" height="400px">
+                        <p>buttons, accelerometers, heat sensors, switches</p>
+                    </section>
+                    <section>
+                        <h2>OUTPUT</h2>
+                        <img src="assets/5MM_LED.jpg" height="400px">
+                        <p>LEDs, motors, speakers</p>
+                    </section>
+                    <section>
+                        <h1>LOGIC</h1>
+                        <img class="no-border" src="assets/blink.png" height="500px">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>
+                            How do I make a simple Arduino program?
+                        </h1>
+                    </section>
+                    <section>
+                        <h3>Code structure</h3>
+                        <pre><code data-trim contenteditable  class=" hljs java">
 void setup()
 {
   // put your setup code here, to run once:
@@ -108,63 +108,115 @@ void loop()
 {
   // put your main code here, to run repeatedly:
 }
-					</code></pre>
-					</section>
-					<section>
-						<h3>Basic Example</h3>
-						<pre><code data-trim contenteditable  class=" hljs java">
+                    </code></pre>
+                    </section>
+                    <section>
+                        <h3>Basic Example</h3>
+                        <pre><code data-trim contenteditable  class=" hljs java">
 int RED_LED = 13;
 
 void setup()
 {
-  // put your setup code here, to run once:
-  pinMode(RED_LED, OUTPUT);   
-  digitalWrite(RED_LED, HIGH);
+  pinMode(RED_LED, OUTPUT);   // set the 13 pin to output
+  digitalWrite(RED_LED, HIGH); // set the 13 pin high
 }
 
 void loop()
 {
 }
-					</code></pre>
-					</section>
-				</section>
+                    </code></pre>
+                    </section>
+                    <section>
+                        <h3>Run the code!</h3>
+                        <img src="assets/verify.png" height="200px">
+                        <img src="assets/upload.png" height="200px">
+                    </section>
+                    <section>
+                        <h3>Blink</h3>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int RED_LED = 13;
 
-			</div>
+void setup()
+{
+  pinMode(RED_LED, OUTPUT);
+}
 
-		</div>
+void loop()
+{
+  digitalWrite(RED_LED, HIGH); // turn the light on
+  delay(1000);                 // wait 1000 milliseconds
+  digitalWrite(RED_LED, LOW);  // turn the light off
+  delay(1000);                 // wait 1000 milliseconds
+}
+                    </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>But I want to have buttons!</h1>
+                    </section>
+                    <section>
+                        <h2>Quit whining!</h2>
+                    </section>
+                    <section>
+                        <h3>Button + LED</h3>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int LED = 10;
+int BUTTON = 3;
 
-		<script src="../reveal.js/lib/js/head.min.js"></script>
-		<script src="../reveal.js/js/reveal.min.js"></script>
+void setup() {
+    pinMode(LED, OUTPUT);
+    pinMode(BUTTON, INPUT); // input mode
+}
 
-		<script>
+void loop() {
+    int readVal = digitalRead(BUTTON); // read the button
+    if(readVal == HIGH){
+        digitalWrite(LED, HIGH); // on if the button is down
+    } else {
+        digitalWrite(LED, LOW); // off otherwise
+    }
+}
+                    </code></pre>
+                    </section>
+                </section>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+            </div>
 
-				theme: 'default',
-				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+        </div>
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
+        <script src="../reveal.js/lib/js/head.min.js"></script>
+        <script src="../reveal.js/js/reveal.min.js"></script>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        <script>
 
-		</script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
 
-	</body>
+                theme: 'default',
+                transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+    </body>
 </html>
