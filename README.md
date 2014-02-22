@@ -7,9 +7,13 @@ The slide for the class all use Hakim El Hattab's HTML Presentation Framework [r
 
 Slides
 -----
-- [Week00](http://saltesta.com/howmm/week00/#/)
-- [Week01](http://saltesta.com/howmm/week01/#/)
-- [Week02](http://saltesta.com/howmm/week02/#/)
-- [Week03](http://saltesta.com/howmm/week03/#/)
-- [Week04](http://saltesta.com/howmm/week04/#/)
-- [Week05](http://saltesta.com/howmm/week05/)
+- [Week00](http://howtmm.com/week00/#/)
+- [Week01](http://howtmm.com/week01/#/)
+- [Week02](http://howtmm.com/week02/#/)
+- [Week03](http://howtmm.com/week03/#/)
+- [Week04](http://howtmm.com/week04/#/)
+- [Week05](http://howtmm.com/week05/)
+
+Workshops
+-----
+- [FabShop](http://howtmm.com/fabshop/#/)
