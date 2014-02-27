@@ -13,6 +13,7 @@ Slides
 - [Week03](http://howtmm.com/week03/#/)
 - [Week04](http://howtmm.com/week04/#/)
 - [Week05](http://howtmm.com/week05/)
+- [Week06](http://howtmm.com/week06/#/)
 
 Workshops
 -----
