@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>EtherNest Processing Workshop</title>
+
+		<meta name="description" content="Hands-on with the Maker Movement">
+		<meta name="author" content="Salvatore Testa">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+
+		<style type="text/css">
+			.reveal section img.no-border {
+				background: none;
+				border: none;
+				box-shadow: none;
+			}
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Processing and Generative Art</h1>
+					<h3>Programming For Artists</h3>
+					<p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
+				</section>
+				<section>
+					<section>
+						<h1>
+							What is Processing?
+						</h1>
+						<a href="http://processing.org/">
+							<img class="no-border" src="assets/processing.svg" height="500">
+						</a>
+					</section>
+					<section>
+						<img class="no-border" src="assets/dev_environment.png" height="500">
+						<img class="no-border" src="assets/fern.png" height="500">
+						<aside class="notes">
+							programming language, develop environment, originally promoted software literacy within the visual arts, since expanded to various fields
+						</aside>
+					</section>
+					<section>
+						<a href="https://github.com/processing">
+							<img src="assets/open_source.png" height="600">
+						</a>
+						<aside class="notes">
+							open source, have a peek
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>How do basic sketches work?</h1>
+					</section>
+					<section>
+						<h2>Two main parts</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  // called at the beginning
+}
+
+void draw() 
+{
+  // run every refresh
+  // default 60 frames per second
+}
+					</code></pre>
+					</section>
+					<section>
+						<h2>Set screen size</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  size(400, 600); // width, height (pixels)
+}
+					</code></pre>
+					<aside class="notes">
+						size has to be called first
+					</aside>
+					</section>
+					<section>
+						<h2>Draw something</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  size(400, 600);
+}
+
+void draw() 
+{
+  fill(255, 0, 0); // make fill color red
+  // centered at x, y and width, height
+  ellipse(200, 200, 300, 300);
+}
+					</code></pre>
+					<img class="no-border" src="assets/red_circle.png" height="300">
+					<aside class="notes">
+						the origin is the top left corner
+					</aside>
+					</section>
+					<section>
+						<h2>Draw order</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  size(400, 600);
+}
+
+void draw() 
+{
+  fill(255, 0, 0);
+  ellipse(200, 200, 300, 300);
+  fill(0, 255, 0);
+  // top left x,y and width, height
+  rect(50, 250, 300, 300);
+}
+					</code></pre>
+					<img class="no-border" src="assets/red_circle_green_square.png" height="300">
+					<aside class="notes">
+						please note that the rectangle's location is based on the top left corner, circle the middle 
+					</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>How can I animate this?</h1>
+					</section>
+					<section>
+						<h2>Draw a bunch!</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  size(400, 600);
+}
+
+int y = 0;
+void draw() 
+{
+  fill(255, 0, 0);
+  ellipse(200, y, 300, 300);
+  y = y + 1; // update the y component
+}
+					</code></pre>
+					<img class="no-border" src="assets/oof.png" height="300">
+					</section>
+					<section>
+						<h2>Draw a bunch better!</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() 
+{
+  size(400, 600);
+}
+
+int y = 0;
+void draw() 
+{
+  background(255); // white background
+  fill(255, 0, 0);
+  ellipse(200, y, 300, 300);
+  y = y + 1;
+}
+					</code></pre>
+					<img class="no-border" src="assets/better_circle.png" height="300">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>How can I click things?</h1>
+					</section>
+					<section>
+						<h2>Click</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+  size(512, 512);  
+}
+
+void draw() {  
+}
+
+// special method, every mouse click
+void mousePressed() {
+  println("Mouse pressed at ("+mouseX+","+mouseY+")");
+}
+					</code></pre>
+					<img class="no-border" src="assets/mouse_click.png" height="300">
+					<aside class="notes">
+						mousePressed, mouseX, and mouseY are all built in to processing
+					</aside>
+					</section>
+					<section>
+						<h2>Click better</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+  size(512, 512);  
+}
+
+void draw() {
+  fill(255, 0, 0);
+  ellipse(256, 256, 100, 100);  
+}
+
+void mousePressed() {
+  if (sq(mouseX-256)+sq(mouseY-256) < sq(50)) {
+    println("Circle! :)");
+  } else {
+    println("Not circle! :(");
+  }
+}
+					</code></pre>
+					<img class="no-border" src="assets/click_it.png" height="200">
+					<aside class="notes">
+						mousePressed, mouseX, and mouseY are all built in to processing
+					</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>How can I share this with my mom?</h1>
+					</section>
+					<section>
+						<h2>Export it!</h2>
+						<img src="assets/export_application.png" height="400">
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h1>Why am I having trouble with serial communication?</h1>
+					</section>
+					<section>
+						<h2>
+						<a href="https://github.com/energia/Energia/wiki/Serial-Communication#hardware-configuration">You didn't read the serial communication configuration documentation!</a>
+						</h2>
+						<small>I don't blame you.</small>
+					</section>
+					<section>
+						<h3>Without serial communication</h3>
+						<img src="assets/no_serial.jpg" height="600">
+					</section>
+					<section>
+						<h3>With serial communication</h3>
+						<img src="assets/serial.jpg" height="600">
+					</section>
+					<section>
+						<h2>Catch it?!</h2>
+					</section>
+					<section>
+						<img src="assets/serial_closeup.jpg" height="600">
+						<aside class="notes">
+							rotate the two jumpers closest to the middle of the board
+						</aside>
+					</section>
+					<section>
+						<h3>Try it out with "Dimmer"</h3>
+						<img src="assets/dimmer.png" height="400">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>What are we doing today?</h1>
+					</section>
+					<section>
+						<h2>Goal</h2>
+						<p>Make a UI with at least 4 click-able events/objects. Examples:</p>
+						<ul>
+							<li>
+								the cow goes...
+							</li>
+							<li>
+								body anatomy
+							</li>
+							<li>
+								this is a circle
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bonus Goal</h2>
+						<p>Make an LED light switch with a UI using serial communication.</p>
+					</section>
+					<section>
+						<h1>Begin!</h1>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'default',
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

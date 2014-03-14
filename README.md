@@ -18,3 +18,4 @@ Slides
 Workshops
 -----
 - [FabShop](http://howtmm.com/fabshop/#/)
+- [FabShop](http://howtmm.com/ethernest/#/)
