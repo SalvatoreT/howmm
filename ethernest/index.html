@@ -439,6 +439,28 @@ void keyPressed() {
 					<section>
 						<h1>Crazy Stuff, Please!</h1>
 					</section>
+                    <section>
+                        <h2>Ribbon</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(512, 512);
+    background(0, 0, 0);
+}
+
+void draw() {
+    // set color to black and mostly transparent
+    fill(0, 10);
+    // draw a rectangle the size of the window
+    rect(0, 0, width, height);
+    // Set color to white
+    fill(255);
+    // No borders
+    noStroke();
+    ellipse(mouseX, mouseY, 50, 50);
+}
+                        </code></pre>
+                        <img class="no-border" src="assets/ribbon.png" height="200">
+                    </section>
 					<section>
 						<h2>Fractals</h2>
 						<pre><code data-trim contenteditable  class=" hljs java">
