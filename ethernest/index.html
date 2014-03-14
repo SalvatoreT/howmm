@@ -276,6 +276,40 @@ void draw() {
 						<img class="no-border" src="assets/above_middle.png" height="200">
 						<img class="no-border" src="assets/below_middle.png" height="200">
 					</section>
+					<section>
+						<h2>For loop</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(300, 300);
+    fill(0, 0, 255);
+}
+
+void draw() {
+    for (int i = 15; i < 300; i = i + 30) {
+        ellipse(i, 150, 30, 30);
+    }
+}
+						</code></pre>
+						<img class="no-border" src="assets/for_loop.png" height="400">
+					</section>
+					<section>
+						<h2>Nested For loop</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(300, 300);
+    fill(0, 0, 255);
+}
+
+void draw() {
+    for (int i = 15; i < 300; i = i + 30) {
+        for (int j = 15; j < 300; j = j + 30) {
+            ellipse(i, j, 30, 30);
+        }
+    }
+}
+						</code></pre>
+						<img class="no-border" src="assets/nested_for_loop.png" height="300">
+					</section>
 				</section>
 
 				<section>
