@@ -17,5 +17,5 @@ Slides
 
 Workshops
 -----
-- [FabShop](http://howtmm.com/fabshop/#/)
-- [FabShop](http://howtmm.com/ethernest/#/)
+- [FabShop - Arduino](http://howtmm.com/fabshop/#/)
+- [EtherNest - Processing](http://howtmm.com/ethernest/#/)
