@@ -310,6 +310,27 @@ void draw() {
 						</code></pre>
 						<img class="no-border" src="assets/nested_for_loop.png" height="300">
 					</section>
+					<section>
+						<h2>Functions</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(300, 300);
+}
+void draw() {
+    blueCircle(150, 100);
+    yellowCircle(150, 200);
+}
+void blueCircle(int x, int y) {
+    fill(0, 0, 255);
+    ellipse(x, y, 50, 50);
+}
+void yellowCircle(int x, int y) {
+    fill(255, 255, 0);
+    ellipse(x, y, 50, 50);
+}
+						</code></pre>
+						<img class="no-border" src="assets/functions.png" height="200">
+					</section>
 				</section>
 
 				<section>
@@ -340,6 +361,32 @@ void mousePressed() {
 						<h2>Click better</h2>
 						<pre><code data-trim contenteditable  class=" hljs java">
 void setup() {
+    size(512, 512);  
+}
+
+void draw() {
+    fill(0, 255, 0);
+    rect(206, 206, 100, 100);  
+}
+
+void mousePressed() {
+    if ((mouseX > 206) && (mouseX < 206 + 100) 
+        && (mouseY > 206) && (mouseY < 206 + 100)) {
+        println("Square! :)");
+    } else {
+        println("Not square! :(");
+    }
+}
+					</code></pre>
+					<img class="no-border" src="assets/click_square.png" height="200">
+					<aside class="notes">
+						mousePressed, mouseX, and mouseY are all built in to processing
+					</aside>
+					</section>
+					<section>
+						<h2>Click with math</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
   size(512, 512);  
 }
 
@@ -356,12 +403,79 @@ void mousePressed() {
     println("Not circle! :(");
   }
 }
-					</code></pre>
-					<img class="no-border" src="assets/click_it.png" height="200">
-					<aside class="notes">
-						mousePressed, mouseX, and mouseY are all built in to processing
-					</aside>
+						</code></pre>
+						<img class="no-border" src="assets/click_it.png" height="200">
+						<aside class="notes">
+							mousePressed, mouseX, and mouseY are all built in to processing
+						</aside>
 					</section>
+					<section>
+						<h2>Press Buttons</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(512, 512);  
+    fill(0, 0, 0);
+}
+void draw() {
+    rect(56, 56, 400, 400);  
+}
+void keyPressed() {
+    if (key == 'r') {
+        fill(255, 0, 0);
+    } else if (key == 'g') {
+        fill(0, 255, 0);
+    } else if (key == 'b') {
+        fill(0, 0, 255);
+    }
+}
+						</code></pre>
+						<img class="no-border" src="assets/red_key.png" height="200">
+						<img class="no-border" src="assets/green_key.png" height="200">
+						<img class="no-border" src="assets/blue_key.png" height="200">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Crazy Stuff, Please!</h1>
+					</section>
+					<section>
+						<h2>Fractals</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(512, 512);  
+}
+void draw() {
+    square(0, 0, 512, 512, 255);
+}
+void square(int x, int y, int w, int h, int c) {
+    fill(c);
+    rect(x, y, w, h);
+    if (w > 1) {
+        square(x, y, w/3, h/3, 255 - c);
+        square(x + w - w/3, y, w/3, h/3, 255 - c);
+        square(x, y + h - h/3, w/3, h/3, 255 - c);
+        square(x + w - w/3, y + h - h/3, w/3, h/3, 255 - c);
+    }
+}
+						</code></pre>
+                        <img class="no-border" src="assets/fractal.png" height="200">
+                        <aside class="notes">
+                            method calls itself
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Barnsley fern</h2>
+                        <a href="https://github.com/SalvatoreT/fern">
+                            <img class="no-border" src="assets/fern.png" height="600">
+                        </a>
+                    </section>
+                    <section>
+                        <h2>Flappy Bird</h2>
+                        <a href="https://github.com/SalvatoreT/flappy_bird">
+                            <img class="no-border" src="assets/flappy_bird.png" height="600">
+                        </a>
+                    </section>
 				</section>
 
 				<section>
@@ -393,10 +507,6 @@ void mousePressed() {
 								this is a circle
 							</li>
 						</ul>
-					</section>
-					<section>
-						<h2>Bonus Goal</h2>
-						<p>Make an LED light switch with a UI using serial communication.</p>
 					</section>
 					<section>
 						<h1>Begin!</h1>
