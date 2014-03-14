@@ -7,8 +7,13 @@ void setup() {
     size(200, 600);
     diameter = height/3.1;
     println(Serial.list());
-    String portName = Serial.list()[0];
-    myPort = new Serial(this, portName, 9600);
+    String portName = Serial.list()[9];
+    try {
+        myPort = new Serial(this, portName, 9600);
+    } catch (RuntimeException e) {
+        println("Please pick a different port.");
+        exit();
+    }
 }
 
 void draw() {
