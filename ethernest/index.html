@@ -52,6 +52,42 @@
 				</section>
 				<section>
 					<section>
+						<h1>Who are these guys?</h1>
+					</section>
+					<section>
+						<h2>Sal</h2>
+						<img width="400" height="400" src="assets/sal.jpg">
+						<aside class="notes">
+							Senior, Brown College, Comp Sci, CS Club Officer, SpoCo, EtherNest
+						</aside>
+					</section>
+					<section>
+						<h2>Reed Jones</h2>
+						<img src="assets/reed.png" height="400px">
+					</section>
+					<section data-background="#0099CC">
+						<h2>Who are you?</h2>
+						<ul>
+							<li>
+								name
+							</li>
+							<li>
+								college
+							</li>
+							<li>
+								year
+							</li>
+							<li>
+								major
+							</li>
+							<li>
+								favorite drink/beverage (not water)
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
 						<h1>
 							What is Processing?
 						</h1>
@@ -195,6 +231,55 @@ void draw()
 
 				<section>
 					<section>
+						<h1>How can I make my sketch more interactive?</h1>
+					</section>
+					<section>
+						<h2>If statements</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(300, 300);
+}
+
+void draw() {
+    // if the mouse is above the 150th pixel
+    if(mouseY < 150) {
+        fill(255, 0, 0); 
+    }
+    // if the mouse is below the 150th pixel
+    if(mouseY >= 150) {
+        fill(0, 255, 0);
+    }
+    ellipse(150, 150, 100, 100);
+}
+						</code></pre>
+						<img class="no-border" src="assets/above_middle.png" height="200">
+						<img class="no-border" src="assets/below_middle.png" height="200">
+					</section>
+					<section>
+						<h2>Else statement</h2>
+						<pre><code data-trim contenteditable  class=" hljs java">
+void setup() {
+    size(300, 300);
+}
+
+void draw() {
+    // if the mouse is above the 150th pixel
+    if(mouseY < 150) {
+        fill(255, 0, 0);
+    // otherwise 
+    } else {
+        fill(0, 255, 0);
+    }
+    ellipse(150, 150, 100, 100);
+}
+						</code></pre>
+						<img class="no-border" src="assets/above_middle.png" height="200">
+						<img class="no-border" src="assets/below_middle.png" height="200">
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<h1>How can I click things?</h1>
 					</section>
 					<section>
@@ -230,6 +315,7 @@ void draw() {
 }
 
 void mousePressed() {
+  // a^2 + b^2 < c^2, Pythagorean Theorem
   if (sq(mouseX-256)+sq(mouseY-256) < sq(50)) {
     println("Circle! :)");
   } else {
@@ -255,38 +341,6 @@ void mousePressed() {
 				</section>
 
 
-				<section>
-					<section>
-						<h1>Why am I having trouble with serial communication?</h1>
-					</section>
-					<section>
-						<h2>
-						<a href="https://github.com/energia/Energia/wiki/Serial-Communication#hardware-configuration">You didn't read the serial communication configuration documentation!</a>
-						</h2>
-						<small>I don't blame you.</small>
-					</section>
-					<section>
-						<h3>Without serial communication</h3>
-						<img src="assets/no_serial.jpg" height="600">
-					</section>
-					<section>
-						<h3>With serial communication</h3>
-						<img src="assets/serial.jpg" height="600">
-					</section>
-					<section>
-						<h2>Catch it?!</h2>
-					</section>
-					<section>
-						<img src="assets/serial_closeup.jpg" height="600">
-						<aside class="notes">
-							rotate the two jumpers closest to the middle of the board
-						</aside>
-					</section>
-					<section>
-						<h3>Try it out with "Dimmer"</h3>
-						<img src="assets/dimmer.png" height="400">
-					</section>
-				</section>
 				<section>
 					<section>
 						<h1>What are we doing today?</h1>
