@@ -49,7 +49,7 @@
                     <h1>FabShop: Arduino</h1>
                     <h3>Microcontrollers are too much fun</h3>
                     <p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
-                    <p>February 22, 2014</p>
+                    <p>March 15, 2014</p>
                 </section>
                 <section>
                     <section>
@@ -71,7 +71,7 @@
                 <section>
                     <section>
                         <h1>
-                            How does it basically work?
+                            How does it work?
                         </h1>
                     </section>
                     <section>
@@ -84,7 +84,7 @@
                     <section>
                         <h2>INPUT</h2>
                         <img src="assets/buttons.jpg" height="400px">
-                        <p>buttons, accelerometers, heat sensors, switches</p>
+                        <p>buttons, accelerometers, heat sensors, switches, photo resistors</p>
                         <aside class="notes">
                             take in information about its environment
                         </aside>
@@ -112,7 +112,7 @@
                         </h1>
                     </section>
                     <section>
-                        <h3>Code structure</h3>
+                        <h2>Code structure</h2>
                         <pre><code data-trim contenteditable  class=" hljs java">
 void setup()
 {
@@ -129,7 +129,7 @@ void loop()
                     </aside>
                     </section>
                     <section>
-                        <h3>Basic Example</h3>
+                        <h2>Basic Example</h2>
                         <pre><code data-trim contenteditable  class=" hljs java">
 int RED_LED = 13;
 
@@ -148,7 +148,7 @@ void loop()
                     </aside>
                     </section>
                     <section>
-                        <h3>Run the code!</h3>
+                        <h2>Run the code!</h2>
                         <img src="assets/verify.png" height="200px">
                         <img src="assets/upload.png" height="200px">
                         <aside class="notes">
@@ -156,7 +156,7 @@ void loop()
                         </aside>
                     </section>
                     <section>
-                        <h3>Blink</h3>
+                        <h2>Blink</h2>
                         <pre><code data-trim contenteditable  class=" hljs java">
 int RED_LED = 13;
 
@@ -175,15 +175,81 @@ void loop()
                     </code></pre>
                     </section>
                 </section>
+                
                 <section>
                     <section>
-                        <h1>But I want to have buttons!</h1>
+                        <h1>Syntax Shtuff</h1>
                     </section>
                     <section>
-                        <h2>Quit whining!</h2>
+                        <h2>Functions</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+void party() {
+  digitalWrite(RED_LED, HIGH);
+  delay(1000);                
+  digitalWrite(RED_LED, LOW); 
+  delay(1000);                
+}
+                    </code></pre>
+                    <aside class="notes">
+                        void means no return value
+                    </aside>
                     </section>
                     <section>
-                        <h3>Button + LED</h3>
+                        <h2>Party Time</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+// ... some other code
+party();
+party();
+party();
+// ... some more code
+                    </code></pre>
+                    </section>
+                    <section>
+                        <h2>Other Types Functions</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int max(int num1, num2) {
+    ...
+}
+int avg(int[] nums) {
+    ...
+}
+void goToCrawlStop(int collegeNumber) {
+    ...
+}
+                    </code></pre>
+                    <aside class="notes">
+                        int means integer
+                    </aside>
+                    </section>
+                    <section>
+                        <h2>If Statement</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+if (statement) {
+    // this code only gets called
+    // if statement is true
+}
+                    </code></pre>
+                    </section>
+                    <section>
+                        <h2>If Example</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int max(int num1, num2) {
+    if(num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+                    </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>I/O Example</h1>
+                    </section>
+                    <section>
+                        <h2>Button + LED</h2>
                         <pre><code data-trim contenteditable  class=" hljs java">
 int LED = 10;
 int BUTTON = 3;
@@ -209,7 +275,7 @@ void loop() {
                 </section>
                 <section>
                     <h2>Thank you!</h2>
-                    <a href="http://howtmm.com/fabshop/"><h3>http://howtmm.com/fabshop/</h3></a>
+                    <a href="http://howtmm.com/fabshop/"><h3>howtmm.com/fabshop/</h3></a>
                 </section>
 
             </div>
