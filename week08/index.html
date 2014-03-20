@@ -56,9 +56,125 @@
                     <section>
                         <h2>Digital and Analog</h2>
                         <small>(for our purposes)</small>
+                        <p>
+                            <img src="assets/analog-signal.gif" height="400px">
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Is digital fun?</h1>
                     </section>
                     <section>
-                        <h2>Digital</h2>
+                        <h2>Yes!</h2>
+                        <img src="assets/digital-signal.png" height="400px">
+                    </section>
+                    <section>
+                        <h2>Digital Output Reminder</h2>
+                        <img src="assets/blink.gif" height="500px">
+                    </section>
+                    <section>
+                        <h2>Digital Input Example</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int buttonPin = P1_3; // builtin button
+int ledPin =  P1_6; // builtin light
+int buttonState = 0;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);      
+  pinMode(buttonPin, INPUT_PULLUP); // input pin <-> ground 
+}
+
+void loop(){
+  buttonState = digitalRead(buttonPin); // read the button
+  if (buttonState == HIGH) { // if the button is up  
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW); 
+  }
+}
+                    </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Is analog cool too?</h1>
+                    </section>
+                    <section>
+                        <h2>Yes, of course!</h2>
+                        <img src="assets/analog.png" height="400px">
+                    </section>
+                    <section>
+                        <h2>Demo</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int PHOTO_RESISTOR = A7;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(PHOTO_RESISTOR, INPUT);
+}
+void loop()
+{
+  Serial.println(analogRead(PHOTO_RESISTOR));
+  delay(500);
+}
+                        </code></pre>
+                        <img class="no-border" src="assets/demo_read.png" height="300px">
+                    </section>
+                    <section>
+                        <h2>Analog Pins</h2>
+                        <img src="assets/LaunchPadMSP430G2553-V1.5.jpg" height="500px">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Are those LEDs made of magic?</h1>
+                    </section>
+                    <section>
+                        <h2>Yes*</h2>
+                        <img src="assets/infrared.jpg" height="500px">
+                        <p><small>*No</small></p>
+                    </section>
+                    <section>
+                        <h2>Schematic</h2>
+                        <img src="assets/scary_picture.jpg" height="500px">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>How can this be useful?</h1>
+                    </section>
+                    <section>
+                        <h2>Logic with infrared</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int PHOTO_RESISTOR = A7;
+int LED = P1_6;
+int THRESHOLD = 1;
+int sensorReading = 0;
+void setup()
+{
+  pinMode(PHOTO_RESISTOR, INPUT);
+  pinMode(LED, OUTPUT);
+}
+void loop()
+{
+  sensorReading = analogRead(PHOTO_RESISTOR);
+  if(sensorReading > THRESHOLD) {
+    digitalWrite(LED, HIGH);
+  } else {
+    digitalWrite(LED, LOW);
+  }
+}
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>What are we doing this week?</h1>
+                    </section>
+                    <section>
+                        <h2>Traffic Light</h2>
+                        <p>Make your traffic light change if the infrared sensor is tripped.</p>
                     </section>
                 </section>
 			</div>
