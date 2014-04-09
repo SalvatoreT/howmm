@@ -1,8 +1,8 @@
 import processing.serial.*;
+
 Serial port;
 
 void setup() {
-    size(900, 300);
     /* Set up serial port */
     println(Serial.list());
     String portName = Serial.list()[4]; // possibly change this number
@@ -17,31 +17,19 @@ void setup() {
 void draw() {
 }
 
-void mousePressed() {
-    // left button click
-    if (mouseX > 0 && mouseX < 300) {
-    }
-    // middle button click
-    // ...
-
-    // right button click
-    // ...
-}
-
 void keyPressed() {
-    switch (keyCode) {
-        case LEFT :
-            port.write(370);
-            port.write(1000/4);
+    switch (key) {
+        case 'a' :
+            playNote(110,250);
             break;
-        case UP :
-            port.write(139);
-            port.write(1000/4);
+        case 's' :
+            playNote(123,250);
             break;
-        case RIGHT : 
+        case 'd' :
+            playNote(131,250);
             break;
+        // add more keys
         default :
-            // nothing
             break;     
     }
 }

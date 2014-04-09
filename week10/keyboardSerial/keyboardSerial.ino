@@ -1,4 +1,4 @@
-int SPEAKER = 8;
+int SPEAKER = P2_0;
 int note, wait;
 
 void setup()
