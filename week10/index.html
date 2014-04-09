@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>COLL 142 Week 10</title>
+
+		<meta name="description" content="Hands-on with the Maker Movement">
+		<meta name="author" content="Salvatore Testa">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+
+		<style type="text/css">
+			.reveal section img.no-border {
+				background: none;
+				border: none;
+				box-shadow: none;
+			}
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>COLL 142 - Week 10</h1>
+					<h3>Speaker Dirty to Me</h3>
+					<p>Salvatore "Sal" Testa /<a href="https://twitter.com/SalTesta14">@saltesta14</a></p>
+				</section>
+                <section>
+                    <section>
+                        <h1>But first...</h1>
+                    </section>
+                    <section>
+                        <h2>Final project has changed</h2>
+                        <img src="assets/catapult.jpg" height="500px">
+                    </section>
+                    <section>
+                        <h3>Aim for projects</h3>
+                        <ul>
+                            <li>incorporate maker technologies</li>
+                            <li>within time constraints</li>
+                            <li>on budget</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>The catapult was...</h3>
+                        <ul>
+                            <li>too mechanical.</li>
+                            <li>too time consuming.</li>
+                            <li>too to pricey.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Final Project</h2>
+                        <img src="assets/maker_player.jpg" height="500px">
+                    </section>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: 'default',
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
