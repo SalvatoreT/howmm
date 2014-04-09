@@ -78,6 +78,116 @@
                         <img src="assets/maker_player.jpg" height="500px">
                     </section>
                 </section>
+                <section>
+                    <section>
+                        <h1>What is a speaker?</h1>
+                    </section>
+                    <section>
+                        <h2>Musical Magnets</h2>
+                        <img src="assets/speaker_diagram.gif" height="500px">
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>How do we make sounds with them?</h1>
+                    </section>
+                    <section>
+                        <img src="assets/speaker_diagram.gif" height="300">
+                        <img src="assets/digital-signal.png" height="300px">
+                    </section>
+                    <section>
+                        <h2>High Level Old School GIF</h2>
+                        <img src="assets/mp3Demo_light_blue.gif" height="300">
+                    </section>
+                    <section>
+                        <h2>Annoying Demo</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int SPEAKER = P2_0;
+void setup()
+{
+  pinMode(SPEAKER, OUTPUT);
+}
+int waittime = 2;
+void loop()
+{
+  digitalWrite(SPEAKER,HIGH);
+  delay(waittime);
+  digitalWrite(SPEAKER,LOW);
+  delay(waittime);
+} // Oh jeez, make it stop
+                       </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>How can we make different sounds?</h1>
+                    </section>
+                    <section>
+                        <h2>Change the amount of time it's high/low</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int SPEAKER = P2_0;
+int highDelay = 2;
+int lowDelay = 3;
+void setup()
+{
+  pinMode(SPEAKER, OUTPUT);
+}
+void loop()
+{
+  digitalWrite(SPEAKER,HIGH);
+  delay(highDelay);
+  digitalWrite(SPEAKER,LOW);
+  delay(lowDelay);
+} // Sounds like the Brown fire alarm
+                       </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Are there any nice, pre-made helpers?</h1>
+                    </section>
+                    <section>
+                        <h2>Yes</h2>
+                        <img src="assets/examples_folder.png" height="300px">
+                    </section>
+                    <section>
+                        <h2>Built-in tone method</h2>
+                        <a href="http://arduino.cc/en/Tutorial/Tone">
+                        <img src="assets/arduino_note.png" height="500px">
+                        </a>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>What are we doing today?</h1>
+                    </section>
+                    <section>
+                        <h2>Explore digital signal</h2>
+                        <pre><code data-trim contenteditable  class=" hljs java">
+int SPEAKER = P2_0;
+int BUTTON = P1_3;
+int highDelay = 2;
+int lowDelay = 3;
+void setup()
+{
+  pinMode(SPEAKER, OUTPUT);
+  pinMode(BUTTON, INPUT_PULLUP);
+}
+void loop()
+{
+  if(digitalRead(BUTTON) == LOW) { // keep your friends
+    digitalWrite(SPEAKER,HIGH);
+    delay(highDelay);
+    digitalWrite(SPEAKER,LOW);
+    delay(lowDelay);
+  }
+}
+                       </code></pre>
+                    </section>
+                    <section>
+                        <h2>Make your own keyboard!</h2>
+                    </section>
+                </section>
 			</div>
 
 		</div>
