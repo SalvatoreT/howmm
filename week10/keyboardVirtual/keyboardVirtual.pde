@@ -112,13 +112,13 @@ void draw() {
 void keyPressed() {
     switch (key) {
         case 'a' :
-            playNote(C3,250);
+            playNote(C4,250);
             break;
         case 's' :
-            playNote(D3,250);
+            playNote(D4,250);
             break;
         case 'd' :
-            playNote(E3,250);
+            playNote(E4,250);
             break;
         // add more keys
         default :
@@ -127,6 +127,9 @@ void keyPressed() {
 }
 
 void playNote(int note, int wait) {
-    port.write(note);
+    int note0 = note >> 8;
+    int note1 = note & (0xFF);
+    port.write(note0);
+    port.write(note1);
     port.write(wait);
 }

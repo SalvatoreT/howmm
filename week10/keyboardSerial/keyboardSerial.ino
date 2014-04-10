@@ -1,5 +1,5 @@
 int SPEAKER = P2_0;
-int note, wait;
+int note0, note1, wait;
 
 void setup()
 {
@@ -8,9 +8,10 @@ void setup()
 
 void loop()
 {
-    if (Serial.available() > 1) {
-        note = Serial.read();
+    if (Serial.available() > 2) {
+        note0 = Serial.read();
+        note1 = Serial.read();
         wait = Serial.read();
-        tone(SPEAKER, note, wait);
+        tone(SPEAKER, (note0 << 8) + note1, wait);
     }
 }
