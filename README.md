@@ -18,6 +18,7 @@ Slides
 - [Week09](http://howtmm.com/week09/#/)
 - [Week10](http://howtmm.com/week10/#/)
 - [Week11](http://howtmm.com/week11/#/)
+- [Week12](http://howtmm.com/week12/#/)
 
 Workshops
 -----
