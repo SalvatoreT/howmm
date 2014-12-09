@@ -1,0 +1,24 @@
+# EtherNest Processing Lab
+- what is processing
+- basic drawing
+    - shapes
+    - images (png, jpg)
+- control structure overview
+    - if
+    - for
+    - function
+- fancy drawing
+    - fractal
+    - animation
+- interacting
+    - clicking
+    - mouse location
+    - button input
+- projects
+    - fractal (Reed)
+        - control structures
+        - recursive drawing
+    - ribbon (Sal)
+        - mouse location
+        - alpha background
+    - flappy bird (Sal)

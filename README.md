@@ -24,3 +24,4 @@ Workshops
 -----
 - [FabShop - Arduino](http://howtmm.com/fabshop/#/)
 - [EtherNest - Processing](http://howtmm.com/ethernest/#/)
+- [Square HoC - Processing](http://howtmm.com/hoc2014/#/)
